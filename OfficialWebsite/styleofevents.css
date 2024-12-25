@@ -1,0 +1,260 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'georgia', sans-serif;
+    background: url(1.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main Container */
+.main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar Section */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    background: #333;
+    height: 60px;
+}
+
+.icon .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: orange;
+}
+.icon {
+    display: flex;
+    align-items: center; /* Center logo and text vertically */
+}
+
+.logo-img {
+    width: 60px; /* Adjust width to make the logo smaller */
+    height: 50px; /* Adjust height to maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and text */
+}
+.menu ul {
+    list-style: none;  /* Remove bullet points */
+    display: flex;
+    gap: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu ul li {
+    list-style: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: orange;
+}
+
+/* Content Box Section */
+.content-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 2rem;
+    margin: 2rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Content Title */
+.content-box h2 {
+    font-size: 1.7rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+/* Content Text */
+.content-box p {
+    font-size: 1.2rem;
+    color: gray;
+    margin-bottom: 1rem;
+}
+
+/* Snowflakes */
+.snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.snowflake {
+    font-size: 2rem;
+    animation: snow 10s linear infinite;
+}
+
+@keyframes snow {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* QR Code Styling */
+.qr-code {
+    max-width: 150px;
+    margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333333;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .content-box h2 {
+        font-size: 1.8rem; /* Adjust for smaller screens */
+    }
+
+    .content-box p {
+        font-size: 1rem;
+    }
+}
+
+/* Upcoming Box Section */
+.upcoming-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Light background with some transparency */
+    border-radius: 10px; /* Rounded corners */
+    padding: 2rem;
+    margin: 2rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Upcoming Title */
+.upcoming-box h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Upcoming Events List */
+.upcoming-box ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+.upcoming-box ul li {
+    margin-bottom: 1.5rem;
+}
+
+.upcoming-box ul li h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.upcoming-box ul li p {
+    color: gray;
+    font-size: 1rem;
+}
+/* Characters Section */
+.characters {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+/* Individual Character Styling */
+.character {
+    font-size: 4rem;  /* Adjust the size of the character */
+    position: absolute;
+    top: 50%;  /* Start from the middle of the screen */
+    transform: translateY(-50%); /* Vertically center */
+    animation: popIn 3s ease-out forwards;
+}
+
+/* Specific Animations for Each Character */
+.snowman {
+    left: -10vw; /* Start off-screen to the left */
+    animation-delay: 0s;
+}
+
+.santa {
+    right: -10vw; /* Start off-screen to the right */
+    animation-delay: 0.5s;
+}
+
+.elf1 {
+    top: 20%; /* Position slightly higher */
+    left: -10vw;
+    animation-delay: 1s;
+}
+
+.elf2 {
+    bottom: 20%; /* Position slightly lower */
+    right: -10vw;
+    animation-delay: 1.5s;
+}
+
+/* Animation for "Popping In" */
+@keyframes popIn {
+    0% {
+        transform: translateX(-100%) translateY(-50%); /* Off-screen to the left */
+    }
+    100% {
+        transform: translateX(0) translateY(-50%); /* End at the center */
+    }
+}

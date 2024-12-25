@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Club Christmas Hackathon</title>
+    <link rel="stylesheet" href="styleofevents.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <div class="icon">
+            <!-- Add the logo image here -->
+            <img src="logo.png" alt="Coding Club Logo" class="logo-img">
+            <h2 class="logo">Coding Club</h2>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="officers.html">OFFICERS</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Snowflakes -->
+    <div class="snowflakes">
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+    </div>
+
+
+
+    <!-- Content Section inside a box -->
+    <div class="content-box">
+        <header class="header">
+            <h1></h1>
+        </header>
+        <h2>Coding Club Christmas Hackathon</h2>
+        <p>🎄 Design a Christmas themed website 🎄</p>
+        <p>
+            Join us for a festive coding challenge where you can create any type of website—profile, club, or anything else!
+        </p>
+        <ul>
+            <p>Can be a Partner/Group Project! Ask for a partner if you need one.</p>
+            <p>🎁 Prizes for the Winners!!!</p>
+            <p>🎉 Submit your project by the last meeting with a party, food, and games!</p>
+        </ul>
+        <p>Scan the QR Code to join the event:</p>
+        <img src="qrcode.png" alt="QR Code to Join" class="qr-code">
+    </div>
+        <!-- Upcoming Box Section -->
+    <div class="upcoming-box">
+        <header class="header">
+            <h1> 24-25 Events </h1>
+        </header>
+        <ul>
+            <li>
+                <h3>Christmas Hackathon</h3>
+                <p>🎄 Design a Christmas themed website. Submit your projects by the last meeting!</p>
+            </li>
+            <li>
+                <h3>Easter Coding Challenge</h3>
+                <p>🎉 Get ready for a coding challenge to kick off 
+                    spring!</p>
+            </li>
+            <li>
+                <h3>Blank Upcoming Event</h3>
+                <p>More details coming soon!</p>
+            </li>
+        </ul>
+    </div>
+    <!-- Snowman, Santa, and Elves -->
+    <div class="characters">
+        <div class="character snowman">☃️</div>
+        <div class="character santa">🎅</div>
+        <div class="character elf1">🧝‍♂️</div>
+        <div class="character elf2">🧝‍♀️</div>
+    </div>
+
+    <footer class="footer">
+        <p>Happy Holidays from the Coding Club! 🎅🤶</p>
+    </footer>
+
+    <script>
+        // Create Snowflakes
+        const snowflakesContainer = document.querySelector('.snowflakes');
+        for (let i = 0; i < 100; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.style.left = `${Math.random() * 100}vw`;
+            snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`;
+            snowflake.style.animationDelay = `${Math.random() * 5}s`;
+            snowflake.textContent = '❄';
+            snowflakesContainer.appendChild(snowflake);
+        }
+    </script>
+</body>
+</html>
+

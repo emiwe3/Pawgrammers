@@ -1,0 +1,139 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar Section */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    background: #333;
+    height: 60px;
+}
+
+.icon .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: orange;
+}
+.icon {
+    display: flex;
+    align-items: center; /* Center logo and text vertically */
+}
+
+.logo-img {
+    width: 60px; /* Adjust width to make the logo smaller */
+    height: 50px; /* Adjust height to maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.menu ul li {
+    list-style: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: orange;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    margin-bottom: 2rem;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    font-size: 1.2rem;
+}
+
+/* Officers Section */
+.officers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Wider boxes */
+    gap: 2rem; /* More spacing between boxes */
+    padding: 0 2rem;
+}
+
+.officer {
+    background: white;
+    border: 3px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 2rem; /* More padding for larger content area */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Optional: Add hover effect */
+}
+
+.officer:hover {
+    transform: scale(1.05); /* Slightly enlarges box on hover */
+}
+
+.officer-photo {
+    width: 250px; /* Larger profile picture */
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.officer h3 {
+    font-size: 1.4rem; /* Bigger role title */
+    color: #444444;
+    margin-bottom: 0.5rem;
+}
+
+.officer-name {
+    font-weight: bold;
+    color: #222;
+    font-size: 1.1rem; /* Bigger name font */
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    font-size: 1rem; /* Increase description font size */
+    color: #666;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+}
