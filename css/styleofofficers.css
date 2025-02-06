@@ -1,0 +1,229 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'inter';
+    background-color: #f4f4f9;
+    color: #333;
+}
+main {
+    margin-top: 90px; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar Section */
+.navbar {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: absolute; 
+    top: 0;
+    width: 100%;
+    background: transparent; 
+    height: 100px;
+    padding: 0 2rem;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem; 
+}
+
+.menu ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    background: rgba(0, 0, 255, 0.5); 
+    border: 2px solid white;
+    border-radius: 50px; 
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu ul li a:hover {
+    background: orange;
+    color: white;
+    transform: scale(1.3); 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+
+.icon {
+    display: flex;
+    align-items: center; 
+}
+
+.logo-img {
+    width: 60px; 
+    height: 50px; 
+    margin-right: 10px; 
+}
+
+.icon .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: orange;
+}
+
+/* Style for Home Link */
+.home-link {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Resize Logo Inside Navbar */
+.home-link .logo-img {
+    width: 30px; 
+    height: 25px;
+}
+
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    font-size: 1.2rem;
+}
+
+
+.sponsor {
+    display: grid;
+    grid-template-columns: 1fr; /* Keeps it centered */
+    justify-content: center;
+    text-align: center;
+    background: white;
+    border: 3px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Adjusts width */
+    margin: 0 auto 2rem; /* Centers and adds spacing */
+}
+
+.sponsor h3 {
+    font-size: 1.6rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+/* Officers Section */
+.officers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Wider boxes */
+    gap: 2rem; /* More spacing between boxes */
+    padding: 0 2rem;
+}
+
+.officer {
+    background: white;
+    border: 3px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 2rem; /* More padding for larger content area */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Optional: Add hover effect */
+}
+
+.officer:hover {
+    transform: scale(1.05); /* Slightly enlarges box on hover */
+}
+
+.officer-photo {
+    width: 250px; /* Larger profile picture */
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.officer h3 {
+    font-size: 1.4rem; /* Bigger role title */
+    color: #444444;
+    margin-bottom: 0.5rem;
+}
+
+.officer-name {
+    font-weight: bold;
+    color: #222;
+    font-size: 1.1rem; /* Bigger name font */
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    font-size: 1rem; /* Increase description font size */
+    color: #666;
+}
+
+/* Footer Section */
+.footer {
+    width: 100%;
+    background: rgba(0,48,135,254); 
+    color: white;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.main {
+    padding-bottom: 60px; 
+}
+/* Left Section */
+.footer-left {
+    flex: 1;
+}
+
+/* Right Section (Follow Us) */
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Instagram Link */
+.insta-link {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.insta-logo {
+    width: 30px; 
+    height: 30px;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+}
