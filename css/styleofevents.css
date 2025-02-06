@@ -7,7 +7,7 @@
 
 body {
     font-family: 'inter';
-    background: url(1.jpg);
+    background: url(../media/1.jpg);
     background-size: cover;
     background-position: center;
     color: white;
