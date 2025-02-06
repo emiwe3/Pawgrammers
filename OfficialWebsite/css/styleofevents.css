@@ -1,0 +1,369 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'inter';
+    background: url(1.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 100px; 
+
+}
+
+/* Main Container */
+.main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar Section */
+.navbar {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    background: transparent; 
+    height: 100px;
+    padding: 0 2rem;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem; 
+}
+
+.menu ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    background: rgba(0, 0, 255, 0.5); 
+    border: 2px solid white;
+    border-radius: 50px; 
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu ul li a:hover {
+    background: orange;
+    color: white;
+    transform: scale(1.3); 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+
+.icon {
+    display: flex;
+    align-items: center; 
+}
+
+.logo-img {
+    width: 60px; 
+    height: 50px; 
+    margin-right: 10px; 
+}
+
+.icon .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: orange;
+}
+
+/* Style for Home Link */
+.home-link {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Resize Logo Inside Navbar */
+.home-link .logo-img {
+    width: 30px; 
+    height: 25px;
+}
+
+
+/* Container to align content-box and upcoming-box side by side */
+.box-container {
+    display: flex;
+    justify-content: space-around; /* Evenly spaces the boxes */
+    align-items: flex-start; /* Aligns boxes to the top */
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+    gap: 2rem; /* Adds spacing between the boxes */
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Adjust individual boxes */
+.content-box, .upcoming-box {
+    flex: 1; 
+    background: rgba(255, 255, 255, 0.8); 
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 300px; 
+}
+
+/* Ensures content inside boxes is readable */
+.content-box h2, .upcoming-box h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box-container {
+        flex-direction: column; 
+        align-items: center;
+    }
+}
+
+
+/* Content Box Section */
+.content-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 2rem;
+    margin: 2rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Content Title */
+.content-box h2 {
+    font-size: 1.7rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+/* Content Text */
+.content-box p {
+    font-size: 1.2rem;
+    color: gray;
+    margin-bottom: 1rem;
+}
+
+/* Snowflakes */
+.snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.snowflake {
+    font-size: 2rem;
+    animation: snow 10s linear infinite;
+}
+
+@keyframes snow {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* QR Code Styling */
+.qr-code {
+    max-width: 150px;
+    margin-top: 20px;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .content-box h2 {
+        font-size: 1.8rem; /* Adjust for smaller screens */
+    }
+
+    .content-box p {
+        font-size: 1rem;
+    }
+}
+
+/* Upcoming Box Section */
+.upcoming-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Light background with some transparency */
+    border-radius: 10px; /* Rounded corners */
+    padding: 2rem;
+    margin: 2rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Upcoming Title */
+.upcoming-box h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Upcoming Events List */
+.upcoming-box ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+.upcoming-box ul li {
+    margin-bottom: 1.5rem;
+}
+
+.upcoming-box ul li h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.upcoming-box ul li p {
+    color: gray;
+    font-size: 1rem;
+}
+/* Characters Section */
+.characters {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+/* Individual Character Styling */
+.character {
+    font-size: 4rem;  /* Adjust the size of the character */
+    position: absolute;
+    top: 50%;  /* Start from the middle of the screen */
+    transform: translateY(-50%); /* Vertically center */
+    animation: popIn 3s ease-out forwards;
+}
+
+/* Specific Animations for Each Character */
+.snowman {
+    left: -10vw; /* Start off-screen to the left */
+    animation-delay: 0s;
+}
+
+.santa {
+    right: -10vw; /* Start off-screen to the right */
+    animation-delay: 0.5s;
+}
+
+.elf1 {
+    top: 20%; /* Position slightly higher */
+    left: -10vw;
+    animation-delay: 1s;
+}
+
+.elf2 {
+    bottom: 20%; /* Position slightly lower */
+    right: -10vw;
+    animation-delay: 1.5s;
+}
+
+/* Animation for "Popping In" */
+@keyframes popIn {
+    0% {
+        transform: translateX(-100%) translateY(-50%); /* Off-screen to the left */
+    }
+    100% {
+        transform: translateX(0) translateY(-50%); /* End at the center */
+    }
+}
+
+/* Footer Section */
+.footer {
+    width: 100%;
+    background: rgba(0,48,135,254); 
+    color: white;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.main {
+    padding-bottom: 60px; 
+}
+/* Left Section */
+.footer-left {
+    flex: 1;
+}
+
+/* Right Section (Follow Us) */
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Instagram Link */
+.insta-link {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.insta-logo {
+    width: 30px; 
+    height: 30px;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+}
